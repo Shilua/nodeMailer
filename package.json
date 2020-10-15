@@ -4,7 +4,8 @@
   "description": "sendEmail via rest",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
   },
   "author": "Shilua",
   "license": "ISC",
