@@ -1,3 +1,4 @@
+var PORT = process.env.PORT  || 3000;
 require('dotenv').config();
 var express = require('express');
 var nodemailer = require('nodemailer');
@@ -35,6 +36,6 @@ app.post('/send-email', (req ,res ) => {
     });
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("Servidor on");
 });
