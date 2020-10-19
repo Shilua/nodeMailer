@@ -46,7 +46,8 @@ function sendEmail(req, res) {
         from: 'maximiliano.vargas@xappia.com',
         to: req.body.to,
         subject: req.body.subject,
-        text: req.body.text
+        text: req.body.text,
+        html: req.body.html
     }
 
     transporter.sendMail(mailOptions, (error, info) => {
