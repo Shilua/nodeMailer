@@ -22,14 +22,7 @@ app.post('/token', (req,res)=>{
 });
 
 app.post('/send-email', (req ,res ) => {
-    
-    if (err) {
-        res.status(403).send('invalid token');
-    } else {
-        sendEmail(req,res);
-    }
-
-    
+    sendEmail(req,res);
 });
 
 function sendEmail(req, res) {
