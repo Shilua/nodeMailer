@@ -22,13 +22,13 @@ app.post('/token', (req,res)=>{
 });
 
 app.post('/send-email', (req ,res ) => {
-    jwt.verify(req.token, process.env.SECRETKEY, (err, data) =>{
-        if (err) {
-            res.status(403).send('invalid token');
-        } else {
-            sendEmail(req,res);
-        }
-    });
+    
+    if (err) {
+        res.status(403).send('invalid token');
+    } else {
+        sendEmail(req,res);
+    }
+
     
 });
 
