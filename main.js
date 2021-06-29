@@ -5,7 +5,11 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
 var app = express();
-
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 app.use(bodyParser.json()); // body en formato json
 app.use(bodyParser.urlencoded({ extended: false })); //body formulario
 
